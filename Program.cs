@@ -1,6 +1,6 @@
 ﻿// Final work of a GeekBrains student Danilov O.P. for 1 semester
 
-string[] stringarray = { "hello", "2", "world", ":-)" };
+string[] stringarray = { "hello", "2", "world", ":-)"};
 int arrayLenght = stringarray.Length;
 string[] stringarray2 = new string[arrayLenght];
 int index2 = 0;
@@ -14,6 +14,15 @@ for (int index = 0; index < arrayLenght; index++)
     }
 }
 
+PrintArray(stringarray);
+Console.Write(" -> ");
+Console.Write("[");
+for (int i = 0; i < index2; i++)
+{
+    if (i < index2 - 1) Console.Write($"{stringarray2[i]}, ");
+    else Console.Write($"{stringarray2[i]}");
+}
+Console.Write("]");
 
 void PrintArray(string[] arr)
 {
@@ -23,5 +32,5 @@ void PrintArray(string[] arr)
         if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
         else Console.Write($"{arr[i]}");
     }
-    Console.WriteLine("]");
+    Console.Write("]");
 }
